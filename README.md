@@ -32,6 +32,8 @@ Este é um projeto **Full-Stack** desenvolvido para o gerenciamento de uma bibli
 
 ---
 
+## Se você quer ver como ficou  basta acessar  [https://lucascobrafatec.github.io/BibliotecaPessoal/] ,  e fazer seus testes.
+
 ## ⚙️ Como executar o projeto localmente
 
 1. **Clone este repositório**:
