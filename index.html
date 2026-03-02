@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Biblioteca</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+
+<div class="form-container">
+  
+    <h2>Cadatrar Novo Livro</h2>
+    <div class="form-group">
+        <input type="text" id="titulo" placeholder="Título do Livro">
+        <input type="text" id="autor" placeholder="Autor">
+        <input type="date" id="data_publicacao">
+        <button onclick="salvarlivro()" class="btn-save" >Salvar Livro</button>
+    </div>
+      <input type="hidden" id="livro-id">
+</div>
+
+    <div class="container">
+    <h1>Meus Livros 📖</h1>
+    
+    <table id="tabela-livros">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Data</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+    </div>
+
+    <script src="./script.js"> 
+    </script>
+</body>
+</html>

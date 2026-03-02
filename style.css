@@ -1,0 +1,136 @@
+/* Importando uma fonte mais moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #f0f2f5; 
+    display: flex;
+    flex-direction: column; /* Para alinhar container e form um embaixo do outro */
+    align-items: center;
+    padding: 40px 20px;
+    margin: 0;
+    color: #333;
+}
+
+.container, .form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px; /* Cantos mais arredondados */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Sombra mais suave e moderna */
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 25px;
+}
+
+h1, h2 {
+    margin-top: 0;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* Estilização do Formulário */
+.form-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1; /* Borda mais visível */
+    border-radius: 8px;
+    flex: 1;
+    min-width: 200px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1); /* Efeito de foco azulado */
+}
+
+/* Tabela Profissional */
+table { 
+    width: 100%; 
+    border-collapse: separate; /* Permite bordas arredondadas na tabela */
+    border-spacing: 0;
+    margin-top: 20px;
+    overflow: hidden;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+}
+
+th { 
+    background-color: #f8f9fa; /* Topo da tabela mais claro */
+    color: #666; 
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #eee;
+}
+
+th, td { 
+    padding: 16px; 
+    text-align: left;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #fcfcfc; /* Efeito de linha destacada ao passar o mouse */
+}
+
+/* Botões */
+button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.1s, filter 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button:active {
+    transform: scale(0.95); /* Botão "afunda" ao clicar */
+}
+
+.btn-save {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+button:hover {
+    filter: brightness(90%); /* Escurece levemente qualquer botão no hover */
+}
+
+
+.acoes-coluna {
+    display: flex;         /* Ativa o Flexbox */
+    gap: 12px;            /* Cria um espaçamento fixo de 12px entre os botões */
+    justify-content: flex-start; /* Alinha os botões à esquerda */
+    align-items: center;  /* Centraliza verticalmente */
+}
+
+/* Base para todos os botões de ação */
+.acoes-coluna button {
+    margin: 0;            /* Remove margens padrão que podem atrapalhar */
+    white-space: nowrap;  /* Impede que o texto do botão quebre em duas linhas */
+    flex-shrink: 0;       /* Garante que o botão não "encha" se a tela diminuir */
+}
