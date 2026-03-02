@@ -71,3 +71,85 @@ async function salvarlivro() {
         } else {
             // Se não tem ID, criamos novo (POST)
             resposta = await fetch(URL_API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dados)
+            });
+        }
+
+        if (resposta.ok) {
+            alert(id ? "Livro atualizado com sucesso!" : "Livro cadastrado com sucesso!");
+            limparFormulario();
+            carregarLivros();
+        }
+    } catch (erro) {
+        console.error("Erro ao salvar:", erro);
+    }
+}
+
+// 3. Função para carregar dados no formulário para edição
+function prepararEdicao(id, titulo, autor, data) {
+    document.getElementById('livro-id').value = id;
+    document.getElementById('titulo').value = titulo;
+    document.getElementById('autor').value = autor;
+
+    // Converte a data para o formato YYYY-MM-DD que o input date exige
+    const dataIso = new Date(data).toISOString().split('T')[0];
+    document.getElementById('data_publicacao').value = dataIso;
+
+    // Muda o visual do botão
+    const btnSave = document.querySelector('.btn-save');
+    btnSave.innerText = "Atualizar Livro 🔄";
+    
+    // Rola para o topo para facilitar a visualização
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// 4. Função para deletar livro
+async function deletarLivro(id) {
+    if (confirm('Tem certeza que deseja excluir este livro?')) {
+        try {
+            const resposta = await fetch(`${URL_API}/${id}`, {
+                method: 'DELETE'
+            });
+            
+            if (resposta.ok) {
+                carregarLivros();
+            }
+        } catch (erro) {
+            console.error('Erro ao deletar', erro);
+        }
+    }
+}
+
+// 5. Função de Busca em Tempo Real
+function filtrarLivros() {
+    const termoBusca = document.getElementById('inputBusca').value.toLowerCase();
+    const linhas = document.querySelectorAll('#tabela-livros tbody tr');
+
+    linhas.forEach(linha => {
+        const titulo = linha.cells[1].textContent.toLowerCase();
+        const autor = linha.cells[2].textContent.toLowerCase();
+
+        if (titulo.includes(termoBusca) || autor.includes(termoBusca)) {
+            linha.style.display = "";
+        } else {
+            linha.style.display = "none";
+        }
+    });
+}
+
+// 6. Funções Auxiliares e Inicialização
+function limparFormulario() {
+    document.getElementById('livro-id').value = '';
+    document.getElementById('titulo').value = '';
+    document.getElementById('autor').value = '';
+    document.getElementById('data_publicacao').value = '';
+    document.querySelector('.btn-save').innerText = "Salvar Livro 💾";
+}
+
+// Bloqueia datas futuras no calendário do HTML
+document.getElementById('data_publicacao').max = new Date().toISOString().split("T")[0];
+
+// Inicia a lista ao abrir a página
+carregarLivros();
