@@ -164,3 +164,28 @@ button:hover {
     border-color: #007bff;
     box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
 }
+
+/* Cria um container que permite rolar a tabela lateralmente no celular */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Ativa a rolagem horizontal */
+    -webkit-overflow-scrolling: touch; /* Deixa a rolagem suave no iPhone */
+    margin-top: 20px;
+}
+
+/* Garante que a tabela não fique menor que o necessário para ser lida */
+table {
+    min-width: 600px; 
+}
+
+/* Ajuste nos botões para telas pequenas */
+@media (max-width: 600px) {
+    .container, .form-container {
+        padding: 15px; /* Diminui o espaçamento interno no celular */
+    }
+    
+    .acoes-coluna {
+        flex-direction: column; /* Coloca os botões um embaixo do outro se a tela for muito estreita */
+        gap: 8px;
+    }
+}
