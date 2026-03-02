@@ -36,24 +36,7 @@ async function carregarLivros() {
     }
 
 
-    //filtro de busca
-}
-
-function filtrarLivros() {
-    const termoBusca = document.getElementById('inputBusca').value.toLowerCase();
-    const linhas = document.querySelectorAll('#tabela-livros tbody tr');
-
-    linhas.forEach(linha => {
-        // Coluna 1 é Título, Coluna 2 é Autor
-        const titulo = linha.cells[1].textContent.toLowerCase();
-        const autor = linha.cells[2].textContent.toLowerCase();
-
-        if (titulo.includes(termoBusca) || autor.includes(termoBusca)) {
-            linha.style.display = ""; // Mostra a linha
-        } else {
-            linha.style.display = "none"; // Esconde a linha
-        }
-    });
+    
 }
 
 
@@ -173,6 +156,26 @@ function limparFormulario() {
 
 // Bloqueia datas futuras no calendário do HTML
 document.getElementById('data_publicacao').max = new Date().toISOString().split("T")[0];
+
+
+//filtro de busca
+function filtrarLivros() {
+    const termoBusca = document.getElementById('inputBusca').value.toLowerCase();
+    const linhas = document.querySelectorAll('#tabela-livros tbody tr');
+
+    linhas.forEach(linha => {
+        // Coluna 1 é Título, Coluna 2 é Autor
+        const titulo = linha.cells[1].textContent.toLowerCase();
+        const autor = linha.cells[2].textContent.toLowerCase();
+
+        if (titulo.includes(termoBusca) || autor.includes(termoBusca)) {
+            linha.style.display = ""; // Mostra a linha
+        } else {
+            linha.style.display = "none"; // Esconde a linha
+        }
+    });
+}
+
 
 // Inicia a lista ao abrir a página
 carregarLivros();
