@@ -134,3 +134,33 @@ button:hover {
     white-space: nowrap;  /* Impede que o texto do botão quebre em duas linhas */
     flex-shrink: 0;       /* Garante que o botão não "encha" se a tela diminuir */
 }
+
+
+/* barra de busca */
+.header-tabela {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.busca-container {
+    flex: 1;
+    max-width: 300px;
+}
+
+#inputBusca {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 20px; 
+    outline: none;
+    transition: all 0.3s;
+}
+
+#inputBusca:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+}

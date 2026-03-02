@@ -34,7 +34,30 @@ async function carregarLivros() {
     } catch (erro) {
         console.error('Erro ao buscar dados: ', erro);
     }
+
+
+    //filtro de busca
 }
+
+function filtrarLivros() {
+    const termoBusca = document.getElementById('inputBusca').value.toLowerCase();
+    const linhas = document.querySelectorAll('#tabela-livros tbody tr');
+
+    linhas.forEach(linha => {
+        // Coluna 1 é Título, Coluna 2 é Autor
+        const titulo = linha.cells[1].textContent.toLowerCase();
+        const autor = linha.cells[2].textContent.toLowerCase();
+
+        if (titulo.includes(termoBusca) || autor.includes(termoBusca)) {
+            linha.style.display = ""; // Mostra a linha
+        } else {
+            linha.style.display = "none"; // Esconde a linha
+        }
+    });
+}
+
+
+
 
 // 2. Função única para Salvar (Cadastrar ou Atualizar)
 async function salvarlivro() {
