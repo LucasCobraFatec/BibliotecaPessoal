@@ -1,57 +1,39 @@
-📚 Biblioteca Pessoal Digital
-Este é um projeto Full-Stack desenvolvido para o gerenciamento de uma biblioteca pessoal, permitindo o cadastro, edição, visualização e exclusão de livros. A aplicação foi construída com foco em boas práticas de desenvolvimento web e integração com banco de dados na nuvem.
+# 📚 Biblioteca Pessoal Digital
 
-🚀 Tecnologias Utilizadas
-Front-end
-HTML5 & CSS3: Estrutura e estilização moderna com foco em UX (User Experience).
+Este é um projeto **Full-Stack** desenvolvido para o gerenciamento de uma biblioteca pessoal, permitindo o cadastro, edição, visualização e exclusão de livros. A aplicação foi construída como parte dos meus estudos em desenvolvimento de software, focando em integração com bancos de dados na nuvem e boas práticas de UI/UX.
 
-JavaScript (ES6+): Lógica de manipulação do DOM e consumo de API.
+---
 
-Google Fonts: Utilização da fonte "Inter" para um visual limpo e profissional.
+## 🚀 Tecnologias Utilizadas
 
-Back-end
-Node.js & Express: Criação da API RESTful para gerenciar as rotas do sistema.
+### **Front-end**
+* **HTML5 & CSS3**: Estrutura semântica e estilização moderna com foco em responsividade.
+* **JavaScript (ES6+)**: Lógica para manipulação do DOM e consumo de APIs de forma assíncrona (`async/await`).
+* **Google Fonts**: Integração da fonte "Inter" para uma tipografia limpa e legível.
 
-PostgreSQL: Banco de dados relacional para persistência das informações dos livros.
+### **Back-end**
+* **Node.js & Express**: Criação do servidor e rotas da API RESTful.
+* **PostgreSQL**: Banco de dados relacional robusto para a persistência dos dados.
+* **CORS & Dotenv**: Gerenciamento de acessos externos e variáveis de ambiente para segurança.
 
-CORS: Configurado para permitir a comunicação segura entre o Front-end e o Back-end.
+### **Infraestrutura / Cloud**
+* **Neon**: Hospedagem do banco de dados PostgreSQL serverless.
+* **Render**: Plataforma utilizada para hospedar a API do Back-end.
+* **GitHub Pages**: Hospedagem do Front-end estático diretamente do repositório.
 
-Infraestrutura / Cloud
-Neon: Hospedagem do banco de dados PostgreSQL serverless.
+---
 
-Render: Hospedagem automatizada do Back-end Node.js.
+## 🛠️ Funcionalidades
 
-GitHub Pages: Hospedagem do Front-end estático.
+* **CRUD Completo**: Sistema para Cadastrar, Ler, Atualizar e Deletar livros do banco de dados.
+* **Busca Dinâmica**: Barra de pesquisa que filtra livros por título ou autor em tempo real.
+* **Validação Inteligente**: Sistema que impede o registro de publicações com datas futuras.
+* **Interface Moderna**: Visual limpo com efeitos de hover, sombras suaves e tabelas organizadas.
 
-🛠️ Funcionalidades
-CRUD Completo: Criar, Ler, Atualizar e Deletar livros.
+---
 
-Busca em Tempo Real: Filtro dinâmico por título ou autor na tabela.
+## ⚙️ Como executar o projeto localmente
 
-Validação de Dados: Impede o cadastro de livros com datas de publicação futuras.
-
-Interface Responsiva: Adaptada para diferentes tamanhos de tela.
-
-⚙️ Como executar o projeto localmente
-Clone o repositório:
-
-Bash
-
-git clone https://github.com/LucasCobraFatec/BibliotecaPessoal.git
-Configure o Back-end:
-
-Entre na pasta do projeto e instale as dependências: npm install.
-
-Crie um arquivo .env com a sua DATABASE_URL.
-
-Inicie o servidor:
-
-Bash
-
-node index.js
-Abra o Front-end:
-
-Execute o arquivo index.html com a extensão Live Server no VS Code.
-
-📝 Autor
-Desenvolvido por Lucas Cobra – Estudante da FATEC 2025.
+1. **Clone este repositório**:
+   ```bash
+   git clone [https://github.com/LucasCobraFatec/BibliotecaPessoal.git](https://github.com/LucasCobraFatec/BibliotecaPessoal.git)
