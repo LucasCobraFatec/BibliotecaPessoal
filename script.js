@@ -1,4 +1,4 @@
-const URL_API = 'http://localhost:3000/livros';
+const URL_API = 'https://biblioteca-backend-6j95.onrender.com';
 
 // Função de buscar livros
 async function carregarLivros() {
