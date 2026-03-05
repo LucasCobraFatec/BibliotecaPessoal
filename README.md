@@ -33,6 +33,7 @@ Este é um projeto **Full-Stack** desenvolvido para o gerenciamento de uma bibli
 ---
 
 ## Se você quer ver como ficou  basta acessar  https://lucascobrafatec.github.io/BibliotecaPessoal/
+obs.: Aguarde alguns segundos  para carregar o banco de dados online.
 
 ## ⚙️ Como executar o projeto localmente
 
